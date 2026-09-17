@@ -869,13 +869,13 @@ a {
 
   .hero__logo {
     position: absolute;
-    top: 80%;
-    left: 45%;
+    top: 90%;
+    left: 40%;
     transform: translateX(-50%);
 
     z-index: 3;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
 
   .hero__instagram {
