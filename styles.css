@@ -869,8 +869,8 @@ a {
 
   .hero__logo {
     position: absolute;
-    top: 99%;
-    left: 30%;
+    top: 10%;
+    left: 10%;
     transform: translateX(-50%);
 
     z-index: 3;
@@ -880,8 +880,8 @@ a {
 
   .hero__instagram {
     position: absolute;
-    top: 80px;
-    right: 40px;
+    top: 15%;
+    right: 10%;
     transform: none;
     z-index: 3;
     width: 40px;
