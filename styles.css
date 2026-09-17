@@ -869,8 +869,8 @@ a {
 
   .hero__logo {
     position: absolute;
-    top: 90%;
-    left: 40%;
+    top: 95%;
+    left: 35%;
     transform: translateX(-50%);
 
     z-index: 3;
