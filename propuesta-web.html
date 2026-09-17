@@ -1,0 +1,752 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      Propuesta Web | Club Deportivo Las Focas Ibagué | Kadaveira Digital
+    </title>
+
+    <meta
+      name="description"
+      content="Propuesta de diseño web para el Club Deportivo Las Focas Ibagué desarrollada por Kadaveira Digital."
+    />
+
+    <meta name="robots" content="noindex, nofollow" />
+
+    <style>
+      /* =========================
+           VARIABLES
+           ========================= */
+
+      :root {
+        --azul: #0d47a1;
+        --azul-oscuro: #082c63;
+        --azul-claro: #e3f2fd;
+        --gris: #f4f7fa;
+        --gris-texto: #455a64;
+        --blanco: #ffffff;
+        --verde: #8bc34a;
+      }
+
+      /* =========================
+           RESET
+           ========================= */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--gris);
+        color: #263238;
+        line-height: 1.6;
+      }
+
+      /* =========================
+           HEADER
+           ========================= */
+
+      header {
+        background: var(--azul-oscuro);
+        color: var(--blanco);
+        padding: 22px 7%;
+        text-align: center;
+      }
+
+      .brand {
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+
+      .brand span {
+        color: #b9e86c;
+      }
+
+      /* =========================
+           HERO
+           ========================= */
+
+      .hero-propuesta {
+        min-height: 75vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 70px 20px;
+        background: linear-gradient(
+          rgba(8, 44, 99, 0.92),
+          rgba(13, 71, 161, 0.88)
+        );
+        color: var(--blanco);
+      }
+
+      .hero-content {
+        max-width: 850px;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 8px 18px;
+        margin-bottom: 25px;
+        border: 1px solid #b9e86c;
+        border-radius: 30px;
+        color: #d9f99d;
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+      }
+
+      .hero-content h1 {
+        font-size: clamp(2.3rem, 6vw, 4.5rem);
+        line-height: 1.1;
+        margin-bottom: 25px;
+      }
+
+      .hero-content h1 span {
+        color: #b9e86c;
+      }
+
+      .hero-content p {
+        max-width: 720px;
+        margin: 0 auto;
+        font-size: 1.2rem;
+        color: #e3f2fd;
+      }
+
+      /* =========================
+           CONTENEDOR
+           ========================= */
+
+      .container {
+        width: min(1100px, 90%);
+        margin: auto;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 45px;
+      }
+
+      .section-title h2 {
+        color: var(--azul-oscuro);
+        font-size: 2.2rem;
+        margin-bottom: 12px;
+      }
+
+      .section-title p {
+        max-width: 700px;
+        margin: auto;
+        color: var(--gris-texto);
+      }
+
+      /* =========================
+           INTRODUCCIÓN
+           ========================= */
+
+      .intro {
+        background: var(--blanco);
+      }
+
+      .intro-text {
+        max-width: 850px;
+        margin: auto;
+        text-align: center;
+        font-size: 1.1rem;
+        color: var(--gris-texto);
+      }
+
+      .intro-text strong {
+        color: var(--azul);
+      }
+
+      /* =========================
+           CARDS
+           ========================= */
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+      }
+
+      .card {
+        background: var(--blanco);
+        padding: 30px;
+        border-radius: 14px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        border-top: 4px solid var(--azul);
+      }
+
+      .card h3 {
+        color: var(--azul);
+        margin-bottom: 15px;
+        font-size: 1.25rem;
+      }
+
+      .card p {
+        color: var(--gris-texto);
+      }
+
+      /* =========================
+           PENDIENTES
+           ========================= */
+
+      .pendientes {
+        background: #eef5fb;
+      }
+
+      .check-list {
+        max-width: 800px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+
+      .check-item {
+        background: var(--blanco);
+        padding: 17px 20px;
+        border-radius: 10px;
+        color: var(--gris-texto);
+      }
+
+      .check-item::before {
+        content: "✓";
+        color: var(--verde);
+        font-weight: 900;
+        margin-right: 10px;
+      }
+
+      /* =========================
+           CONTENIDO A PROPUESTA
+           ========================= */
+
+      .propuesta-cliente {
+        background: var(--blanco);
+      }
+
+      .propuesta-box {
+        max-width: 850px;
+        margin: auto;
+        padding: 35px;
+        border-left: 5px solid var(--verde);
+        background: #f7fafc;
+        border-radius: 8px;
+      }
+
+      .propuesta-box h3 {
+        color: var(--azul-oscuro);
+        margin-bottom: 15px;
+      }
+
+      .propuesta-box p {
+        color: var(--gris-texto);
+      }
+
+      /* =========================
+           INFORMACIÓN Y DERECHOS
+           ========================= */
+
+      .informacion {
+        background: var(--gris);
+      }
+
+      .info-box {
+        max-width: 900px;
+        margin: auto;
+        padding: 30px;
+        background: var(--blanco);
+        border-radius: 12px;
+        color: var(--gris-texto);
+        font-size: 0.95rem;
+      }
+
+      .info-box strong {
+        color: #263238;
+      }
+
+      /* =========================
+           CTA KADAVEIRA
+           ========================= */
+
+      .cta-kadaveira {
+        background: var(--azul-oscuro);
+        color: var(--blanco);
+        text-align: center;
+      }
+
+      .cta-kadaveira h2 {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+      }
+
+      .cta-kadaveira p {
+        max-width: 650px;
+        margin: 0 auto 30px;
+        color: #dce9f5;
+      }
+
+      /* =========================
+           CTA PROPUESTA
+           ========================= */
+
+      .cta-propuesta {
+        background: var(--blanco);
+        text-align: center;
+      }
+
+      .cta-propuesta h2 {
+        color: var(--azul-oscuro);
+        font-size: 2.3rem;
+        margin-bottom: 15px;
+      }
+
+      .cta-propuesta p {
+        max-width: 650px;
+        margin: 0 auto 30px;
+        color: var(--gris-texto);
+      }
+
+      /* =========================
+           BOTONES
+           ========================= */
+
+      .btn {
+        display: inline-block;
+        padding: 14px 28px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: 0.25s ease;
+      }
+
+      .btn-primary {
+        background: var(--verde);
+        color: #172000;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        opacity: 0.9;
+      }
+
+      .btn-secondary {
+        display: inline-block;
+        padding: 16px 34px;
+        background: linear-gradient(135deg, #1565c0, #0d47a1);
+        color: #ffffff;
+        border: 3px solid #64b5f6;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 800;
+        font-size: 1.05rem;
+        letter-spacing: 0.5px;
+        box-shadow:
+          0 0 0 2px rgba(255, 255, 255, 0.8),
+          0 6px 18px rgba(198, 96, 159, 0.35);
+        transition: all 0.25s ease;
+      }
+
+      .btn-secondary:hover {
+        background: linear-gradient(135deg, #1976d2, #1565c0);
+        border-color: #b9e86c;
+        transform: translateY(-3px);
+        box-shadow:
+          0 0 0 2px #b9e86c,
+          0 8px 22px rgba(13, 71, 161, 0.45);
+      }
+
+      /* =========================
+           FOOTER
+           ========================= */
+
+      footer {
+        background: #061f46;
+        color: #b7c9da;
+        text-align: center;
+        padding: 30px 20px;
+        font-size: 0.9rem;
+      }
+
+      footer strong {
+        color: var(--blanco);
+      }
+
+      /* =========================
+           RESPONSIVE
+           ========================= */
+
+      @media (max-width: 768px) {
+        section {
+          padding: 55px 0;
+        }
+
+        .cards {
+          grid-template-columns: 1fr;
+        }
+
+        .check-list {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-propuesta {
+          min-height: 70vh;
+          padding: 60px 20px;
+        }
+
+        .hero-content p {
+          font-size: 1.05rem;
+        }
+
+        .section-title h2 {
+          font-size: 1.8rem;
+        }
+
+        .propuesta-box,
+        .info-box {
+          padding: 25px;
+        }
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+
+      .brand img {
+        width: 400px;
+        height: auto;
+        object-fit: contain;
+      }
+      .aviso-propuesta {
+        max-width: 700px;
+        margin: 25px auto 0;
+        padding: 14px 20px;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        border-radius: 8px;
+        background: rgba(243, 248, 102, 0.08);
+        color: #faa8e4;
+        font-size: 1.5rem;
+      }
+
+      .enlace-demo {
+        text-align: center;
+      }
+
+      .enlace-demo span {
+        display: inline-block;
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        color: var(--azul);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =========================
+         HEADER
+         ========================= -->
+
+    <div class="brand">
+      <img src="img/logo-kadaveira.png" alt="Kadaveira Digital" />
+    </div>
+
+    <!-- =========================
+         HERO
+         ========================= -->
+
+    <section class="hero-propuesta">
+      <div class="hero-content">
+        <div class="badge">BORRADOR · DEMOSTRACIÓN</div>
+
+        <h1>
+          Propuesta de sitio web<br />
+          <span>Club Deportivo Las Focas Ibagué</span>
+        </h1>
+        <div class="aviso-propuesta">
+          Esta página es una presentación de propuesta desarrollada por
+          Kadaveira Digital. El botón que enlaza con la demostración de la web
+          del Club Deportivo Las Focas Ibagué se encuentra al final de esta
+          página.
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         INTRODUCCIÓN
+         ========================= -->
+
+    <section class="intro">
+      <div class="container">
+        <div class="section-title">
+          <h2>¿Qué presenta la página de muestra?</h2>
+        </div>
+
+        <div class="intro-text">
+          <p>
+            La página que se enlaza al final de la página presenta una
+            <strong>demostración preliminar</strong>
+            del posible sitio web del Club Deportivo Las Focas Ibagué. El
+            objetivo es mostrar una propuesta de diseño, estructura, navegación
+            y presentación de contenidos antes de desarrollar una versión
+            definitiva.
+          </p>
+
+          <br />
+
+          <p>
+            <strong
+              >La demostración no constituye actualmente el sitio web oficial
+              del club.</strong
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         QUÉ INCLUYE
+         ========================= -->
+
+    <section>
+      <div class="container">
+        <div class="section-title">
+          <h2>¿Qué incluye la demostración?</h2>
+
+          <p>
+            La propuesta permite visualizar la estructura y experiencia que
+            podría tener el futuro sitio web.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Diseño responsive</h3>
+
+            <p>
+              Adaptación del sitio para computadores, tablets y celurares,
+              facilitando la navegación desde diferentes dispositivos.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Contenido del club</h3>
+
+            <p>
+              Espacios destinados a presentar información del club, sus
+              actividades, entrenamientos, torneos y otros contenidos
+              relevantes.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Contacto y navegación</h3>
+
+            <p>
+              Estructura de navegación clara y sección de contacto para
+              facilitar que deportistas, familias y visitantes puedan
+              comunicarse con el club.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         VERSIÓN DEFINITIVA
+         ========================= -->
+
+    <section class="pendientes">
+      <div class="container">
+        <div class="section-title">
+          <h2>¿Qué quedaría para la versión definitiva?</h2>
+
+          <p>
+            Antes de publicar el sitio definitivo sería necesario completar y
+            configurar diferentes elementos.
+          </p>
+        </div>
+
+        <div class="check-list">
+          <div class="check-item">
+            Páginas legales y textos correspondientes.
+          </div>
+
+          <div class="check-item">Política de privacidad.</div>
+
+          <div class="check-item">
+            Política y gestión de cookies, cuando corresponda.
+          </div>
+
+          <div class="check-item">Configuración del SEO técnico.</div>
+
+          <div class="check-item">Etiquetas title y meta description.</div>
+
+          <div class="check-item">Etiquetas canonical.</div>
+
+          <div class="check-item">Datos estructurados Schema.org.</div>
+
+          <div class="check-item">Open Graph para redes sociales.</div>
+
+          <div class="check-item">Sitemap.xml y robots.txt.</div>
+
+          <div class="check-item">Dominio y alojamiento definitivos.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         CONTENIDO A PROPUESTA
+         ========================= -->
+
+    <section class="propuesta-cliente">
+      <div class="container">
+        <div class="section-title">
+          <h2>La página puede crecer</h2>
+        </div>
+
+        <div class="propuesta-box">
+          <h3>Contenido y secciones a propuesta del club</h3>
+
+          <p>
+            La estructura de la web es una propuesta inicial. Antes de la
+            versión definitiva se podrán ampliar, modificar o incorporar nuevas
+            secciones y contenidos de acuerdo con las necesidades del Club
+            Deportivo Las Focas Ibagué.
+          </p>
+
+          <br />
+
+          <p>
+            Por ejemplo, podrían incorporarse posteriormente secciones
+            relacionadas con categorías, entrenadores, horarios, resultados,
+            noticias, galería multimedia, calendario, patrocinadores u otra
+            información que el club considere relevante.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         INFORMACIÓN DE LA DEMOSTRACIÓN
+         ========================= -->
+
+    <section class="informacion">
+      <div class="container">
+        <div class="section-title">
+          <h2>Información sobre la demostración</h2>
+        </div>
+
+        <div class="info-box">
+          <p>
+            La demostración ha sido desarrollada por
+            <strong>Kadaveira Digital</strong> como propuesta de diseño y
+            estructura web para el Club Deportivo Las Focas Ibagué.
+          </p>
+
+          <br />
+
+          <p>
+            El código, diseño y elementos propios desarrollados específicamente
+            para esta demostración pertenecen a Kadaveira Digital hasta que se
+            acuerden las condiciones de contratación, desarrollo y entrega del
+            proyecto.
+          </p>
+
+          <br />
+
+          <p>
+            Las marcas, fotografías, logotipos y demás materiales pertenecen a
+            sus respectivos titulares. Algunos textos, imágenes, enlaces y
+            elementos de la demostración pueden ser provisionales y están
+            destinados exclusivamente a presentar la propuesta.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         CTA KADAVEIRA DIGITAL
+         ========================= -->
+
+    <section class="cta-kadaveira">
+      <div class="container">
+        <h2>¿Quieres conocer Kadaveira Digital?</h2>
+
+        <p>
+          Conoce los servicios y planes disponibles para desarrollar una
+          presencia web profesional para negocios, organizaciones y proyectos.
+        </p>
+
+        <a
+          href="https://kadaveiradigital.com/precios-diseno-web-y-marketing-digital/"
+          class="btn btn-primary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver planes y servicios
+        </a>
+      </div>
+    </section>
+
+    <!-- =========================
+         CTA PROPUESTA
+         ========================= -->
+
+    <section class="cta-propuesta">
+      <div class="container">
+        <h2>Demostración de la web del Club</h2>
+
+        <p>
+          La siguiente página corresponde a la demostración visual del futuro
+          sitio web del Club Deportivo Las Focas Ibagué.
+        </p>
+        <div class="enlace-demo">
+          <span>⇩⇩ ENLACE A LA DEMOSTRACIÓN WEB ⇩⇩</span>
+        </div>
+        <a
+          href="index.html"
+          class="btn btn-secondary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver web del Club Las Focas Ibagué
+        </a>
+      </div>
+    </section>
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
+    <footer>
+      <p>
+        Propuesta y demostración desarrollada por
+        <strong>Kadaveira Digital</strong>.
+      </p>
+
+      <p>Club Deportivo Las Focas Ibagué · Proyecto preliminar</p>
+    </footer>
+  </body>
+</html>
