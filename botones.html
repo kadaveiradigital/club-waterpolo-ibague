@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --azul-profundo: #0d47a1;
+        --azul-medio: #1565c0;
+        --azul-agua: #29b6f6;
+        --azul-claro: #90caf9;
+        --azul-palido: #e3f2fd;
+      }
+
+      .wp-card {
+        position: relative;
+        border-radius: 20px;
+        padding: 30px 28px 26px;
+        overflow: hidden;
+        background: linear-gradient(
+          165deg,
+          var(--azul-palido) 0%,
+          #cfe8fd 55%,
+          var(--azul-claro) 100%
+        );
+        border: 9px solid var(--azul-medio);
+        box-shadow:
+          inset 0 0 0 3px rgba(255, 255, 255, 0.5),
+          inset 0 10px 25px rgba(13, 71, 161, 0.18),
+          0 12px 28px rgba(13, 71, 161, 0.22);
+           transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+      }
+.wp-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--azul-agua);
+  box-shadow:
+    inset 0 0 0 3px rgba(255,255,255,.65),
+    inset 0 10px 25px rgba(13,71,161,.22),
+    0 20px 36px rgba(13,71,161,.32);
+}
+.wp-card::before { transition: background-position 1.2s ease; }
+.wp-card:hover::before { background-position: 120px 0; }
+      .wp-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -10%;
+        width: 120%;
+        height: 22px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20'%3E%3Cpath d='M0 12 Q25 2 50 12 T100 12 T150 12 T200 12 V20 H0 Z' fill='%23ffffff' fill-opacity='0.55'/%3E%3C/svg%3E");
+        background-size: 200px 22px;
+        background-repeat: repeat-x;
+        opacity: 0.8;
+      }
+
+      .wp-card__title {
+        margin: 6px 0 6px;
+        font-size: 1.35rem;
+        color: var(--azul-profundo);
+        font-weight: 700;
+      }
+      .wp-card__text {
+        margin: 0 0 16px;
+        color: #274b6b;
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+
+      .wp-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .wp-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        color: #1c3d5e;
+        font-size: 0.93rem;
+        line-height: 1.4;
+      }
+      .wp-list .wp-ball {
+        flex: none;
+        margin-top: 2px;
+      }
+
+      .wp-buttons {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .wp-btn {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        border: none;
+        cursor: pointer;
+        font-family: inherit;
+        font-weight: 600;
+        font-size: 0.98rem;
+        color: var(--azul-profundo);
+        padding: 15px 34px;
+        background: linear-gradient(180deg, #daeeff 0%, var(--azul-claro) 100%);
+        box-shadow:
+          0 6px 14px rgba(13, 71, 161, 0.25),
+          inset 0 1px 0 rgba(255, 255, 255, 0.7);
+        transition:
+          transform 0.2s ease,
+          color 0.3s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .wp-btn:active {
+        transform: translateY(1px);
+      }
+
+      .wp-btn--pill {
+        border-radius: 999px;
+      }
+      .wp-btn--tile {
+        border-radius: 10px;
+        border-bottom: 4px solid var(--azul-medio);
+      }
+
+      .wp-btn::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background-color: var(--azul-agua);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20'%3E%3Cpath d='M0 10 Q25 0 50 10 T100 10 T150 10 T200 10 V20 H0 Z' fill='%23e3f6ff' fill-opacity='0.9'/%3E%3C/svg%3E");
+        background-repeat: repeat-x;
+        background-size: 100px 16px;
+        background-position: 0 bottom;
+        transform: translateY(100%);
+        opacity: 0;
+        transition:
+          transform 0.35s ease,
+          opacity 0.25s ease;
+      }
+
+      .wp-btn:hover {
+        color: #06305c;
+      }
+      .wp-btn:hover::after {
+        transform: translateY(0);
+        opacity: 1;
+        animation: wp-ola 1.8s linear infinite;
+      }
+
+      @keyframes wp-ola {
+        from {
+          background-position-x: 0;
+        }
+        to {
+          background-position-x: 100px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .wp-btn:hover::after {
+          animation: none;
+        }
+      }
+      .wp-card__glare {
+  position: absolute;
+  top: -60%; left: -70%;
+  width: 45%; height: 220%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,.55), transparent);
+  transform: rotate(18deg) translateX(-120%);
+  transition: transform .8s ease;
+  pointer-events: none;
+}
+
+.wp-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: linear-gradient(115deg, transparent 30%, rgba(255,255,255,.65) 48%, transparent 66%);
+  background-size: 260% 100%;
+  background-position: -100% 0;
+  animation: wp-brillo-suave 4.5s ease-in-out infinite;
+  transition: opacity .3s ease;
+  pointer-events: none;
+}
+.wp-btn:hover::before { opacity: 0; }
+
+@keyframes wp-brillo-suave {
+  0%   { background-position: -120% 0; }
+  50%  { background-position: 120% 0; }
+  100% { background-position: -120% 0; }
+}
+.wp-card:hover .wp-card__glare { transform: rotate(18deg) translateX(340%); }
+    </style>
+  </head>
+  <body>
+    <div class="wp-card"> 
+        <span class="wp-card__glare" aria-hidden="true"></span>
+      <h3 class="wp-card__title">Equipo Sub-18</h3>
+      <p class="wp-card__text">
+        Entrenamientos cuatro veces por semana enfocados en técnica de brazada,
+        posesión de balón y táctica de ataque en superioridad numérica.
+      </p>
+      <ul class="wp-list">
+        <li>
+          <svg
+            class="wp-ball"
+            viewBox="0 0 20 20"
+            width="18"
+            height="18"
+            aria-hidden="true"
+          >
+            <circle
+              cx="10"
+              cy="10"
+              r="9"
+              fill="#ffd54f"
+              stroke="#f9a825"
+              stroke-width="1"
+            />
+            <path
+              d="M2 7 Q10 2 18 7"
+              fill="none"
+              stroke="#212121"
+              stroke-width="1.2"
+            />
+            <path
+              d="M2 13 Q10 18 18 13"
+              fill="none"
+              stroke="#212121"
+              stroke-width="1.2"
+            />
+            <path
+              d="M10 1 L10 19"
+              stroke="#212121"
+              stroke-width="1"
+              opacity="0.4"
+            />
+          </svg>
+          Horario: martes y jueves, 6:00 p. m.
+        </li>
+        <!-- repite el <li> con el mismo SVG para cada punto de la lista -->
+        <li>
+          <svg
+            class="wp-ball"
+            viewBox="0 0 20 20"
+            width="18"
+            height="18"
+            aria-hidden="true"
+          >
+            <circle
+              cx="10"
+              cy="10"
+              r="9"
+              fill="#ffd54f"
+              stroke="#f9a825"
+              stroke-width="1"
+            />
+            <path
+              d="M2 7 Q10 2 18 7"
+              fill="none"
+              stroke="#212121"
+              stroke-width="1.2"
+            />
+            <path
+              d="M2 13 Q10 18 18 13"
+              fill="none"
+              stroke="#212121"
+              stroke-width="1.2"
+            />
+            <path
+              d="M10 1 L10 19"
+              stroke="#212121"
+              stroke-width="1"
+              opacity="0.4"
+            />
+          </svg>
+          Horario: martes y jueves, 6:00 p. m.
+        </li>
+        <li>
+          <svg
+            class="wp-ball"
+            viewBox="0 0 20 20"
+            width="18"
+            height="18"
+            aria-hidden="true"
+          >
+            <circle
+              cx="10"
+              cy="10"
+              r="9"
+              fill="#ffd54f"
+              stroke="#f9a825"
+              stroke-width="1"
+            />
+            <path
+              d="M2 7 Q10 2 18 7"
+              fill="none"
+              stroke="#212121"
+              stroke-width="1.2"
+            />
+            <path
+              d="M2 13 Q10 18 18 13"
+              fill="none"
+              stroke="#212121"
+              stroke-width="1.2"
+            />
+            <path
+              d="M10 1 L10 19"
+              stroke="#212121"
+              stroke-width="1"
+              opacity="0.4"
+            />
+          </svg>
+          Horario: martes y jueves, 6:00 p. m.
+        </li>
+      </ul>
+    </div>
+
+    <div class="wp-buttons">
+      <button class="wp-btn wp-btn--pill">Únete al equipo</button>
+      <a href="#" class="wp-btn wp-btn--tile">Ver calendario</a>
+    </div>
+  </body>
+</html>

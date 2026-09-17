@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Club Las Focas Ibagué - Club de Waterpolo en Ibagué, Tolima. Entrenamientos, torneos y formación deportiva."
+    />
+    <title>Club Las Focas Ibagué - Waterpolo</title>
+
+    <!-- Google Fonts: Ysabeau SC y Ysabeau -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@400;700&family=Ysabeau:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navegación superior - Solo 3 botones -->
+    <nav class="navbar">
+      <ul class="navbar__menu">
+        <li class="navbar__item">
+          <a href="index.html" class="navbar__link">Inicio</a>
+        </li>
+        <li class="navbar__item">
+          <a href="actividades.html" class="navbar__link">Actividades</a>
+        </li>
+        <li class="navbar__item">
+          <a href="contacto.html" class="navbar__link">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero hero--inicio">
+      <!-- Logo arriba a la derecha -->
+      <div class="hero__logo">
+        <img
+          src="img/logo.png"
+          alt="Logo Club LasFocas Ibagué"
+          width="120px"
+          height="120px"
+          onerror="this.style.display = 'none'"
+        />
+      </div>
+
+      <!-- Icono Instagram debajo del logo -->
+      <a
+        href="https://www.instagram.com/clubfocasibague/"
+        target="_blank"
+        rel="noopener"
+        class="hero__instagram"
+        aria-label="Instagram Club Focas Ibagué"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="48"
+          height="48"
+        >
+          <defs>
+            <!-- Degradado oficial de Instagram -->
+            <linearGradient
+              id="ig-gradient-bg"
+              x1="100%"
+              y1="0%"
+              x2="0%"
+              y2="100%"
+            >
+              <stop offset="0%" stop-color="#833AB4" />
+              <stop offset="50%" stop-color="#FD1D1D" />
+              <stop offset="100%" stop-color="#FCB045" />
+            </linearGradient>
+          </defs>
+
+          <!-- Fondo de la app redondeado -->
+          <rect width="24" height="24" rx="5.5" fill="url(#ig-gradient-bg)" />
+
+          <!-- Logo centrado en blanco -->
+          <g transform="translate(3, 3) scale(0.75)">
+            <path
+              fill="#FFFFFF"
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+            />
+          </g>
+        </svg>
+      </a>
+
+      <div class="hero__content">
+        <h1 class="hero__title">Club Las Focas</h1>
+        <p class="hero__subtitle">
+          Club Histórico de Polo Acuático en Ibagué.<br />
+          Más de 30 años de pasión en el agua.<br />
+          ¡Únete a nosotros y entrena con los mejores!
+        </p>
+        <div class="wp-buttons">
+          <a href="contacto.html" class="wp-btn wp-btn--tile">Contáctanos</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sección de tarjetas -->
+    <section class="section-cards">
+      <div class="wp-card">
+        <span class="wp-card__glare" aria-hidden="true"></span>
+        <h3 class="wp-card__title">¿Quiénes somos?</h3>
+        <p class="wp-card__text">
+          El Club Deportivo Las Focas de Waterpolo es una organización
+          registrada en Ibagué, Tolima, dedicada al fomento y desarrollo del
+          waterpolo en la región.
+        </p>
+        <ul class="wp-list">
+          <li>
+            <svg
+              class="wp-ball"
+              viewBox="0 0 20 20"
+              width="18"
+              height="18"
+              aria-hidden="true"
+            >
+              <circle
+                cx="10"
+                cy="10"
+                r="9"
+                fill="#ffd54f"
+                stroke="#f9a825"
+                stroke-width="1"
+              />
+              <path
+                d="M2 7 Q10 2 18 7"
+                fill="none"
+                stroke="#212121"
+                stroke-width="1.2"
+              />
+              <path
+                d="M2 13 Q10 18 18 13"
+                fill="none"
+                stroke="#212121"
+                stroke-width="1.2"
+              />
+              <path
+                d="M10 1 L10 19"
+                stroke="#212121"
+                stroke-width="1"
+                opacity="0.4"
+              />
+            </svg>
+            Entrenamientos regulares en piscinas de Ibagué.
+          </li>
+          <li>
+            <svg
+              class="wp-ball"
+              viewBox="0 0 20 20"
+              width="18"
+              height="18"
+              aria-hidden="true"
+            >
+              <circle
+                cx="10"
+                cy="10"
+                r="9"
+                fill="#ffd54f"
+                stroke="#f9a825"
+                stroke-width="1"
+              />
+              <path
+                d="M2 7 Q10 2 18 7"
+                fill="none"
+                stroke="#212121"
+                stroke-width="1.2"
+              />
+              <path
+                d="M2 13 Q10 18 18 13"
+                fill="none"
+                stroke="#212121"
+                stroke-width="1.2"
+              />
+              <path
+                d="M10 1 L10 19"
+                stroke="#212121"
+                stroke-width="1"
+                opacity="0.4"
+              />
+            </svg>
+            Participación en torneos locales y nacionales.
+          </li>
+          <li>
+            <svg
+              class="wp-ball"
+              viewBox="0 0 20 20"
+              width="18"
+              height="18"
+              aria-hidden="true"
+            >
+              <circle
+                cx="10"
+                cy="10"
+                r="9"
+                fill="#ffd54f"
+                stroke="#f9a825"
+                stroke-width="1"
+              />
+              <path
+                d="M2 7 Q10 2 18 7"
+                fill="none"
+                stroke="#212121"
+                stroke-width="1.2"
+              />
+              <path
+                d="M2 13 Q10 18 18 13"
+                fill="none"
+                stroke="#212121"
+                stroke-width="1.2"
+              />
+              <path
+                d="M10 1 L10 19"
+                stroke="#212121"
+                stroke-width="1"
+                opacity="0.4"
+              />
+            </svg>
+            Formación para niños, jóvenes y adultos.
+          </li>
+        </ul>
+      </div>
+
+      <div class="wp-card">
+        <span class="wp-card__glare" aria-hidden="true"></span>
+        <h3 class="wp-card__title">Nuestra misión</h3>
+        <p class="wp-card__text">
+          Promover el waterpolo como disciplina deportiva formativa, recreativa
+          y competitiva, ofreciendo espacios de entrenamiento y desarrollo de
+          talento acuático.
+        </p>
+        <ul class="wp-list">
+          <li>
+            <svg
+              class="wp-ball"
+              viewBox="0 0 20 20"
+              width="18"
+              height="18"
+              aria-hidden="true"
+            >
+              <circle
+                cx="10"
+                cy="10"
+                r="9"
+                fill="#ffd54f"
+                stroke="#f9a825"
+                stroke-width="1"
+              />
+              <path
+                d="M2 7 Q10 2 18 7"
+                fill="none"
+                stroke="#212121"
+                stroke-width="1.2"
+              />
+              <path
+                d="M2 13 Q10 18 18 13"
+                fill="none"
+                stroke="#212121"
+                stroke-width="1.2"
+              />
+              <path
+                d="M10 1 L10 19"
+                stroke="#212121"
+                stroke-width="1"
+                opacity="0.4"
+              />
+            </svg>
+            Fomento de valores como disciplina y trabajo en equipo.
+          </li>
+          <li>
+            <svg
+              class="wp-ball"
+              viewBox="0 0 20 20"
+              width="18"
+              height="18"
+              aria-hidden="true"
+            >
+              <circle
+                cx="10"
+                cy="10"
+                r="9"
+                fill="#ffd54f"
+                stroke="#f9a825"
+                stroke-width="1"
+              />
+              <path
+                d="M2 7 Q10 2 18 7"
+                fill="none"
+                stroke="#212121"
+                stroke-width="1.2"
+              />
+              <path
+                d="M2 13 Q10 18 18 13"
+                fill="none"
+                stroke="#212121"
+                stroke-width="1.2"
+              />
+              <path
+                d="M10 1 L10 19"
+                stroke="#212121"
+                stroke-width="1"
+                opacity="0.4"
+              />
+            </svg>
+            Espacios inclusivos para todas las edades.
+          </li>
+          <li>
+            <svg
+              class="wp-ball"
+              viewBox="0 0 20 20"
+              width="18"
+              height="18"
+              aria-hidden="true"
+            >
+              <circle
+                cx="10"
+                cy="10"
+                r="9"
+                fill="#ffd54f"
+                stroke="#f9a825"
+                stroke-width="1"
+              />
+              <path
+                d="M2 7 Q10 2 18 7"
+                fill="none"
+                stroke="#212121"
+                stroke-width="1.2"
+              />
+              <path
+                d="M2 13 Q10 18 18 13"
+                fill="none"
+                stroke="#212121"
+                stroke-width="1.2"
+              />
+              <path
+                d="M10 1 L10 19"
+                stroke="#212121"
+                stroke-width="1"
+                opacity="0.4"
+              />
+            </svg>
+            Pasión por el agua y el deporte.
+          </li>
+        </ul>
+        <div class="wp-buttons">
+          <a href="contacto.html" class="wp-btn wp-btn--pill">Únete al club</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección imagen + texto -->
+    <section class="section-image-text">
+      <div class="section-image-text__image">
+        <img
+          src="img/waterpolo_focas2.jpg"
+          alt="Jugadores de waterpolo del Club Las Focas Ibagué en entrenamiento"
+        />
+      </div>
+      <div class="section-image-text__content">
+        <h2 class="section-image-text__title">Entrena con los mejores</h2>
+        <p class="section-image-text__text">
+          En el Club Las Focas Ibagué ofrecemos entrenamientos especializados
+          para todas las categorías, con enfoque en técnica, táctica y
+          preparación física. Nuestro equipo está comprometido con el desarrollo
+          deportivo y personal de cada atleta.
+        </p>
+        <p class="section-image-text__text">
+          Ya seas principiante o tengas experiencia, aquí encontrarás un espacio
+          para crecer, competir y disfrutar del waterpolo.
+        </p>
+        <div class="wp-buttons">
+          <a href="actividades.html" class="wp-btn wp-btn--tile"
+            >Ver actividades</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__section">
+          <h4 class="footer__title">Club Las Focas Ibagué</h4>
+          <p class="footer__text">
+            Waterpolo con pasión y disciplina en Ibagué, Tolima. Únete a nuestra
+            comunidad deportiva.
+          </p>
+        </div>
+
+        <div class="footer__section">
+          <h4 class="footer__title">Contacto</h4>
+          <p class="footer__text">
+            Ibagué, Tolima, Colombia<br />
+            Email: contacto@clublasfocasibague.com<br />
+            Teléfono: +57 300 123 4567
+          </p>
+        </div>
+
+        <div class="footer__section">
+          <h4 class="footer__title">Síguenos</h4>
+          <div class="footer__social">
+            <a
+              href="https://www.instagram.com/clubfocasibague/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+            >
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 Club Las Focas Ibagué. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>
